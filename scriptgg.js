@@ -66,7 +66,7 @@ searchBx.onkeyup = (e) => {
     });
     emptyArr = emptyArr.map((data) => {
       return data =`<li>
-                      <a href="/HTML/FEFinal/index2.html?q=${data.username}?id=${String(data.id).padStart(6, '0')}">
+                      <a href="index2.html?q=${data.username}?id=${String(data.id).padStart(6, '0')}">
                         <div class="searchUserInfo">
                           <img class="userImg" src="${data.profile_img}"></img>
                           <h5>${data.username}</h5>
@@ -96,7 +96,7 @@ let showUserData = (list) => {
   searchOut.innerHTML = listData;
 }
 
-if(window.location.pathname == "/HTML/FEFinal/index2.html") {
+if(window.location.pathname == "index2.html") {
     let searchPath = window.location.search;
     let number = "0123456789"
     let check = (x) => number.includes(x)  ? true : false;
