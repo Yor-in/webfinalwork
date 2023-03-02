@@ -3,7 +3,7 @@ let user = [
       id: 1,
       username: "telly_tawin",
       fullname: "Worapon Klabsri",
-      profile_img: "https://scontent.fcnx1-1.fna.fbcdn.net/v/t39.30808-6/317489971_5623605147752916_3985050570724987458_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFmMFwNQQOWqRvP48NME4RHI-v5OrkZU3kj6_k6uRlTebRC9srvj-VmJlch8cq2wqpcHpOfZGiKFTuuVPTy1ys-&_nc_ohc=T6sEsm2NJZ4AX-yQ1zi&_nc_ht=scontent.fcnx1-1.fna&oh=00_AfCwZ6Of0bzMwj7n_r-cduvDU8u4XVlgf_aWpaTpmwBqPQ&oe=63E595AF",
+      profile_img: "images/user-1.jpg",
       posts: "69 posts",
       follower: "101 follower",
       following: "1 following",
@@ -12,7 +12,7 @@ let user = [
       id: 2,
       username: "bright.att",
       fullname: "Bright Athit",
-      profile_img: "https://scontent.fcnx1-1.fna.fbcdn.net/v/t39.30808-6/326162774_633938541866029_7579181424752404603_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFCEnOpLpb92a3G2CNkXu_okPSl6D-HOrqQ9KXoP4c6upSboY1kedn0HgY65mVPMqUSlxY2UwFAHroL3-eArW-M&_nc_ohc=I-ljvPg9vLwAX-s19x6&_nc_ht=scontent.fcnx1-1.fna&oh=00_AfABvJD1EtnivJmtYW1HgDIKGDowiqQUafyI95BJjmYngw&oe=63E5512C",
+      profile_img: "images/user-2.jpg",
       posts: "1412 posts",
       follower: "579 follower",
       following: "230 follwing",
@@ -21,7 +21,7 @@ let user = [
       id: 3,
       username: "k.yor_in",
       fullname: "Yor-in Udomwattanakul",
-      profile_img: "https://scontent.fcnx1-1.fna.fbcdn.net/v/t39.30808-6/326969510_474492804896615_6730554989233831402_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeF7akdej7FSHEg1WP4Nkida81kqIydG5nfzWSojJ0bmd85UnA4DzufuqQpur94_17pHekRuD8zN020zFUwa7by8&_nc_ohc=McXLrhV-o-MAX_dUk31&_nc_ht=scontent.fcnx1-1.fna&oh=00_AfAFx6bLF-LF1vfP8BYSrC92tPWOiSjBqB0BGx3JHn7aTw&oe=63E6933A",
+      profile_img: "images/user-3.jpg",
       posts: "101 posts",
       follower: "491 follower",
       following: "2.04m following",
@@ -30,7 +30,7 @@ let user = [
       id: 4,
       username: "py_keen",
       fullname: "Prachya Chaisermtawan",
-      profile_img: "https://scontent.fcnx1-1.fna.fbcdn.net/v/t1.15752-9/320341431_513720900778653_8799088590109916420_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHOzE_7vpTE4KI9d1KWZniC8fymwlMi0Lbx_KbCUyLQtqkDtn6Hch5SwhhwUD7nd7RExYw4bTNQkpZNT_o50Fgf&_nc_ohc=7-3JDKYU9IwAX8zIlkd&tn=BbohIBpXRqZ6EukG&_nc_ht=scontent.fcnx1-1.fna&oh=03_AdTwHyz1mNtotmIzYasUsD8Av73y50O-m46DipxXPGOXYA&oe=64089FFE",
+      profile_img: "images/user-4.jpg",
       posts: "24 posts",
       follower: "547 follower",
       following: "299 following",
@@ -39,7 +39,7 @@ let user = [
       id: 5,
       username: "lnwmalee",
       fullname: "Malee SoBeautiful",
-      profile_img: "https://scontent.fcnx1-1.fna.fbcdn.net/v/t1.6435-9/30572013_597993593884021_3245693574267797504_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFmf1VAm-2_gSgt7uN-CARTVJWuvejebbdUla696N5ttyMFcREthXzJooRxBT3eQMKJvF5kBAaCEDhcdRbd_1Q9&_nc_ohc=L4_fiCKkKKoAX99S4Z2&_nc_ht=scontent.fcnx1-1.fna&oh=00_AfDyN_ra25tGaxAMczqsWYKqBwsI-H4YHtxK1rPZlQV7jg&oe=6408BA3F",
+      profile_img: "images/user-5.jpg",
       posts: "1,234 posts",
       follower: "2k follower",
       following: "1.8k following",
@@ -96,12 +96,14 @@ let showUserData = (list) => {
   searchOut.innerHTML = listData;
 }
 
-if(window.location.pathname == "index2.html") {
-    let searchPath = window.location.search;
-    let number = "0123456789"
+if(window.location.pathname == "/index2.html") {
+
+  console.log(window.location.pathname)
+  let searchPath = window.location.search;
+  let number = "0123456789"
     let check = (x) => number.includes(x)  ? true : false;
     let matches = [...searchPath].reduce((x, y) => check(y) ? x+y : x, '')
-
+    
     let imgPrfAll = document.querySelectorAll("[id='imgPrf']");
     let namePrfAll = document.querySelectorAll("[id='namePrf']");
 
