@@ -39,7 +39,7 @@ let user = [
       id: 5,
       username: "lnwmalee",
       fullname: "Malee SoBeautiful",
-      profile_img: "images/user-5.jpg",
+      profile_img: "images/user-5.png",
       posts: "1,234 posts",
       follower: "2k follower",
       following: "1.8k following",
